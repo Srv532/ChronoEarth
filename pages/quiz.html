@@ -4,25 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz — ChronoEarth</title>
-    <!-- CSS links will go here in Phase 2 -->
 </head>
 <body>
+
     <header>
         <nav>
             <a href="../index.html">ChronoEarth</a>
-            <!-- Navigation links will expand later -->
         </nav>
     </header>
-    
+
     <main>
-        <h1>Quiz</h1>
-        <!-- All content goes here -->
+        <h1>Test Your Deep Time Knowledge</h1>
+
+        <!-- Quiz Container: JS will inject questions here -->
+        <div id="quiz-app">
+            
+            <!-- Question View -->
+            <div id="question-view">
+                <div id="progress-bar">Question 1 of 10</div>
+                <h2 id="question-text">Loading question...</h2>
+                <div id="options-container">
+                    <!-- JS will generate: <button class="option-btn">...</button> -->
+                </div>
+            </div>
+
+            <!-- Feedback View (hidden by default) -->
+            <div id="feedback-view" class="hidden">
+                <div id="feedback-icon"></div>
+                <p id="feedback-text"></p>
+                <a id="learn-more-link" href="#" class="hidden">📖 Learn More</a>
+                <button id="next-btn">Continue</button>
+            </div>
+
+            <!-- Results View (hidden by default) -->
+            <div id="results-view" class="hidden">
+                <h2>Your Score: <span id="final-score">0</span>/10</h2>
+                <div id="score-message"></div>
+                <div id="weak-topics"></div>
+                <button id="retry-btn">Try Again</button>
+                <a href="../index.html">← Back to Timeline</a>
+            </div>
+
+        </div>
     </main>
-    
+
     <footer>
         <p>ChronoEarth — B.Tech CSE Project</p>
     </footer>
-    
-    <!-- JS links will go here in Phase 3 -->
+
+    <!-- PHASE 3: <script src="../js/quiz-data.js"></script> -->
+    <!-- PHASE 3: <script src="../js/quiz.js"></script> -->
+
 </body>
 </html>
