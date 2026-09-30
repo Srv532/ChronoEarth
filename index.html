@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChronoEarth — A Journey Through Deep Time</title>
-    <!-- Phase 2: Linking external CSS -->
+    <meta name="description" content="Explore 4.5 billion years of Earth's history. From molten rock to modern civilization — one eon at a time.">
     <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
+<body class="theme-void">
 
     <!-- ==================== HEADER / NAVIGATION ==================== -->
     <header>
@@ -50,9 +50,6 @@
             Scroll through 4.5 billion years of history, one eon at a time.
         </p>
         <a href="#timeline">Start Journey</a>
-        
-        <!-- PHASE 3: Geological Clock will be inserted here -->
-        <!-- <div id="geological-clock">[Clock Component]</div> -->
     </section>
 
     <!-- ==================== TIMELINE OVERVIEW ==================== -->
@@ -60,16 +57,13 @@
         <h2>The Geological Timeline</h2>
         <p>Click any era to begin exploring.</p>
 
-        <!-- PHASE 2: This will become a styled grid or horizontal timeline -->
-        <!-- PHASE 3: Scroll-triggered clock will sync with these sections -->
-        
         <article id="precambrian">
             <h3>Precambrian Supereon</h3>
             <p>4.6 billion – 541 million years ago</p>
-            <p>Spanning over 4 billion years, the Precambrian represents the vast, foundational chapter of Earth's history. It begins with the formation of our planet from a hellish, molten state and encompasses the cooling of the crust, the formation of the first oceans, and the origin of life itself. By the end of this supereon, Earth had transformed into a world capable of supporting early, complex multicellular organisms.</p>
+            <p>Spanning over 4 billion years, the Precambrian represents the vast, foundational chapter of Earth's history. It begins with the formation of our planet from a hellish, molten state and encompasses the cooling of the crust, the formation of the first oceans, and the origin of life itself.</p>
             
             <div class="image-placeholder">
-                <img src="IMAGE_LINK_PLACEHOLDER" alt="Precambrian Supereon Image">
+                <img src="images/index.jpg" alt="Deep space void — the beginning of time">
             </div>
             
             <nav>
@@ -78,7 +72,7 @@
                     <li><a href="pages/moon-formation.html">Moon Formation</a></li>
                     <li><a href="pages/hadean.html">Hadean Eon</a></li>
                     <li><a href="pages/archean.html">Archean Eon</a></li>
-                    <li><a href="pages/great-oxidation.html">Great Oxidation Event</a></li>
+                    <li><a href="pages/great-oxidation.html">Great Oxidation</a></li>
                     <li><a href="pages/proterozoic.html">Proterozoic Eon</a></li>
                     <li><a href="pages/snowball-earth.html">Snowball Earth</a></li>
                 </ul>
@@ -88,16 +82,16 @@
         <article id="paleozoic">
             <h3>Paleozoic Era</h3>
             <p>541 – 252 million years ago</p>
-            <p>The Paleozoic Era, meaning "ancient life," marks a time of dramatic biological and geological change. It kicked off with the Cambrian Explosion, an unprecedented burst of evolutionary innovation that introduced most major animal groups. Over the next 300 million years, life conquered the continents, leading to vast forests, early amphibians, and massive insects, culminating tragically in the most devastating mass extinction our planet has ever witnessed.</p>
+            <p>The Paleozoic Era, meaning "ancient life," marks a time of dramatic biological and geological change. It kicked off with the Cambrian Explosion, an unprecedented burst of evolutionary innovation that introduced most major animal groups.</p>
             
             <div class="image-placeholder">
-                <img src="IMAGE_LINK_PLACEHOLDER" alt="Paleozoic Era Image">
+                <img src="images/cambrian.jpg" alt="Paleozoic Era — ancient marine life">
             </div>
             
             <nav>
                 <ul>
                     <li><a href="pages/cambrian.html">Cambrian Explosion</a></li>
-                    <li><a href="pages/ordovician-silurian.html">Ordovician & Silurian</a></li>
+                    <li><a href="pages/ordovician-silurian.html">Ordovician &amp; Silurian</a></li>
                     <li><a href="pages/devonian.html">Devonian</a></li>
                     <li><a href="pages/carboniferous.html">Carboniferous</a></li>
                     <li><a href="pages/permian-extinction.html">Permian Extinction</a></li>
@@ -108,10 +102,10 @@
         <article id="mesozoic">
             <h3>Mesozoic Era</h3>
             <p>252 – 66 million years ago</p>
-            <p>Often referred to as the "Age of Reptiles," the Mesozoic Era is best known as the time when dinosaurs dominated the Earth. Spanning from 252 to 66 million years ago, this era saw the breakup of the supercontinent Pangea, the evolution of the first birds and mammals, and the rise of flowering plants. It ultimately came to a dramatic close with the infamous K-Pg extinction event, triggered by a catastrophic asteroid impact.</p>
+            <p>Often referred to as the "Age of Reptiles," the Mesozoic Era is best known as the time when dinosaurs dominated the Earth. This era saw the breakup of Pangea, the evolution of the first birds and mammals, and the rise of flowering plants.</p>
             
             <div class="image-placeholder">
-                <img src="IMAGE_LINK_PLACEHOLDER" alt="Mesozoic Era Image">
+                <img src="images/mesozoic.jpg" alt="Mesozoic Era — age of dinosaurs">
             </div>
             
             <nav>
@@ -125,10 +119,10 @@
         <article id="cenozoic">
             <h3>Cenozoic Era</h3>
             <p>66 million years ago – Present</p>
-            <p>The Cenozoic Era, known as the "Age of Mammals," spans the last 66 million years up to the present day. In the wake of the dinosaur extinction, small, furry survivors rapidly evolved and diversified to fill vacant ecological niches across the globe. This era is characterized by the cooling of Earth's climate, repeated ice ages, and ultimately, the evolution of primates, leading to the emergence of modern humans.</p>
+            <p>The Cenozoic Era, known as the "Age of Mammals," spans the last 66 million years. In the wake of the dinosaur extinction, small survivors evolved and diversified, leading to repeated ice ages and the emergence of modern humans.</p>
             
             <div class="image-placeholder">
-                <img src="IMAGE_LINK_PLACEHOLDER" alt="Cenozoic Era Image">
+                <img src="images/cenozoic.jpg" alt="Cenozoic Era — age of mammals">
             </div>
             
             <nav>
@@ -142,10 +136,11 @@
 
         <article id="deep-dives">
             <h3>Deep Dives</h3>
-            <p>Geological history is shaped by monumental, cross-cutting forces that span billions of years rather than being confined to a single era. Our Deep Dives explore the most significant of these recurring themes, including the relentless cycle of plate tectonics, the catastrophic impact of the "Big Five" mass extinctions, and the billions of years of chemical evolution that shaped the Earth's atmosphere into the breathable air we rely on today.</p>
+            <p>Cross-cutting forces that span billions of years</p>
+            <p>Explore the most significant recurring themes in Earth's history, from the relentless cycle of plate tectonics to the catastrophic Big Five mass extinctions and the evolution of our atmosphere.</p>
             
             <div class="image-placeholder">
-                <img src="IMAGE_LINK_PLACEHOLDER" alt="Deep Dives Image">
+                <img src="images/atmosphere.jpg" alt="Earth's atmosphere — deep dives">
             </div>
             
             <nav>
@@ -165,12 +160,11 @@
         <article>
             <h3>Interactive Timeline</h3>
             <p>Scroll through deep time with our geological clock.</p>
-            <!-- PHASE 3: Insert clock preview graphic here -->
         </article>
         
         <article>
             <h3>Branching Quiz</h3>
-            <p>Test your knowledge and learn from your mistakes with guided review.</p>
+            <p>Test your knowledge and learn from your mistakes.</p>
             <a href="pages/quiz.html">Take the Quiz</a>
         </article>
         
@@ -181,11 +175,10 @@
     </section>
 
     <!-- ==================== DID YOU KNOW? ==================== -->
-    <aside id="facts">
-        <h3>Did You Know?</h3>
+    <section id="fact">
+        <h2>Did You Know?</h2>
         <p>If Earth's entire history were compressed into a single 24-hour day, humans would appear at 11:59 PM.</p>
-        <!-- PHASE 3: This will become a rotating fact carousel -->
-    </aside>
+    </section>
 
     <!-- ==================== ABOUT / TEAM ==================== -->
     <section id="about">
@@ -197,12 +190,12 @@
             frontend development principles to scientific storytelling.
         </p>
         
-        <h3 style="text-align: left;">The Team</h3>
-        <ul style="text-align: left;">
-            <li><strong>Malavya</strong> — Project Architect & Integration</li>
-            <li><strong>Divya</strong> — Content Lead & Research</li>
-            <li><strong>Sravan</strong> — Visual Design & UX</li>
-            <li><strong>Aravind</strong> — Interactivity & Logic</li>
+        <h3>The Team</h3>
+        <ul>
+            <li><strong>Malavya</strong> — Project Architect &amp; Integration</li>
+            <li><strong>Divya</strong> — Content Lead &amp; Research</li>
+            <li><strong>Sravan</strong> — Visual Design &amp; UX</li>
+            <li><strong>Aravind</strong> — Interactivity &amp; Logic</li>
         </ul>
     </section>
 
@@ -216,9 +209,6 @@
         </nav>
         <p><small>All geological data verified against peer-reviewed sources.</small></p>
     </footer>
-
-    <!-- PHASE 3: JavaScript files will be linked here -->
-    <!-- <script src="js/main.js"></script> -->
 
 </body>
 </html>
