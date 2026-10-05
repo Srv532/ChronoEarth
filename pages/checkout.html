@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout — ChronoEarth Merchandise</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body class="theme-void">
+    <input type="checkbox" id="theme-switch" class="theme-switch" aria-label="Switch between dark and light mode">
+    <label for="theme-switch" class="theme-toggle theme-corner"><span class="when-dark">Light mode</span><span class="when-light">Dark mode</span></label>
+
+    <header>
+        <nav>
+            <a href="../index.html" class="brand"><img src="../images/logo-dark.svg" alt="ChronoEarth logo" class="logo-small logo-dark"><img src="../images/logo-light.svg" alt="" class="logo-small logo-light">ChronoEarth</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="merchandise.html">Merchandise</a>
+            <a href="login.html">Log out</a>
+            <a href="peoples.html">Peoples</a>
+        </nav>
+    </header>
+
+    <main class="checkout">
+        <h1>Checkout</h1>
+        <p class="checkout-note">This is a demo checkout for the ChronoEarth project. Nothing is charged, stored or sent anywhere.</p>
+
+        <form class="checkout-form" action="order-confirmed.html" method="get">
+            <div class="checkout-fields">
+
+                <fieldset class="co-box">
+                    <legend>1. Your order</legend>
+                    <div class="co-row">
+                        <div class="co-field co-wide">
+                            <label for="item">Product</label>
+                            <select id="item" name="item" required>
+                                <option value="" selected disabled>Choose a product</option>
+                            <optgroup label="T-Shirts">
+                                <option>Birth from Stardust Tee — ₹799</option>
+                                <option>The Day the Dinosaurs Died Tee — ₹799</option>
+                                <option>When the Planet Froze Tee — ₹799</option>
+                            </optgroup>
+                            <optgroup label="Shirts">
+                                <option>Life’s Big Bang Camp Shirt — ₹1,499</option>
+                                <option>4.5 Billion Years Camp Shirt — ₹1,499</option>
+                                <option>Strata Linen Shirt · 541 Ma — ₹1,799</option>
+                            </optgroup>
+                            <optgroup label="Cups &amp; Mugs">
+                                <option>Hadean Magma Mug — ₹449</option>
+                                <option>Life Invented the Air Mug — ₹449</option>
+                            </optgroup>
+                            <optgroup label="Stickers">
+                                <option>Era Sticker Set — ₹249</option>
+                                <option>Quote Sticker Pack — ₹249</option>
+                                <option>Burgess Shale Sticker Pack — ₹299</option>
+                            </optgroup>
+                            <optgroup label="Badges">
+                                <option>Era Enamel Badge Set — ₹599</option>
+                            </optgroup>
+                            <optgroup label="Bottles &amp; Flasks">
+                                <option>The Great Melt Bottle — ₹899</option>
+                                <option>Geological Clock Hip Flask — ₹1,299</option>
+                            </optgroup>
+                            <optgroup label="Bags">
+                                <option>Trilobite Tote Bag — ₹599</option>
+                            </optgroup>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="co-row">
+                        <div class="co-field">
+                            <label for="size">Size</label>
+                            <select id="size" name="size" required>
+                                <option value="" selected disabled>Select size</option>
+                                <option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option>
+                                <option>One size (mugs, bottles, bags, stickers, pins)</option>
+                            </select>
+                            <small><a href="merchandise.html#size-chart">View size chart</a></small>
+                        </div>
+                        <div class="co-field">
+                            <label for="qty">Quantity</label>
+                            <input id="qty" name="qty" type="number" min="1" max="10" value="1" required>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset class="co-box">
+                    <legend>2. Delivery details</legend>
+                    <div class="co-row">
+                        <div class="co-field"><label for="fullname">Full name</label><input id="fullname" type="text" autocomplete="name" required></div>
+                        <div class="co-field"><label for="phone">Phone</label><input id="phone" type="tel" autocomplete="tel" pattern="[0-9+ ]{10,15}" title="Enter a 10-digit phone number" required></div>
+                    </div>
+                    <div class="co-row">
+                        <div class="co-field co-wide"><label for="email">Email</label><input id="email" type="email" autocomplete="email" required></div>
+                    </div>
+                    <div class="co-row">
+                        <div class="co-field co-wide"><label for="address">Address</label><input id="address" type="text" autocomplete="street-address" required></div>
+                    </div>
+                    <div class="co-row">
+                        <div class="co-field"><label for="city">City</label><input id="city" type="text" autocomplete="address-level2" required></div>
+                        <div class="co-field"><label for="pin">PIN code</label><input id="pin" type="text" inputmode="numeric" pattern="[0-9]{6}" title="6-digit PIN code" autocomplete="postal-code" required></div>
+                    </div>
+                </fieldset>
+
+                <fieldset class="co-box pay-box">
+                    <legend>3. Payment method</legend>
+
+                    <input type="radio" name="pay" value="upi" id="pay-upi" checked>
+                    <input type="radio" name="pay" value="card" id="pay-card">
+                    <input type="radio" name="pay" value="netbanking" id="pay-net">
+                    <input type="radio" name="pay" value="cod" id="pay-cod">
+
+                    <div class="pay-options">
+                        <label for="pay-upi" class="pay-option"><span class="pay-icon">📱</span><span><strong>UPI</strong><small>Google Pay, PhonePe, Paytm</small></span></label>
+                        <label for="pay-card" class="pay-option"><span class="pay-icon">💳</span><span><strong>Credit / Debit card</strong><small>Visa, Mastercard, RuPay</small></span></label>
+                        <label for="pay-net" class="pay-option"><span class="pay-icon">🏦</span><span><strong>Net banking</strong><small>All major banks</small></span></label>
+                        <label for="pay-cod" class="pay-option"><span class="pay-icon">💵</span><span><strong>Cash on delivery</strong><small>Pay when it arrives</small></span></label>
+                    </div>
+
+                    <div class="pay-panel pay-panel-upi">
+                        <label for="upi-id">UPI ID</label>
+                        <input id="upi-id" type="text" placeholder="name@bank" pattern="[A-Za-z0-9._\-]{2,}@[A-Za-z]{2,}" title="Example: name@bank" autocomplete="off">
+                    </div>
+
+                    <div class="pay-panel pay-panel-card">
+                        <div class="co-field co-wide"><label for="card-no">Card number</label><input id="card-no" type="text" inputmode="numeric" placeholder="1234 5678 9012 3456" pattern="[0-9 ]{13,19}" title="13 to 19 digits" autocomplete="off"></div>
+                        <div class="co-field co-wide"><label for="card-name">Name on card</label><input id="card-name" type="text" autocomplete="off"></div>
+                        <div class="co-row">
+                            <div class="co-field"><label for="card-exp">Expiry (MM/YY)</label><input id="card-exp" type="text" placeholder="MM/YY" pattern="(0[1-9]|1[0-2])/[0-9]{2}" title="MM/YY" autocomplete="off"></div>
+                            <div class="co-field"><label for="card-cvv">CVV</label><input id="card-cvv" type="password" inputmode="numeric" pattern="[0-9]{3,4}" title="3 or 4 digits" autocomplete="off"></div>
+                        </div>
+                    </div>
+
+                    <div class="pay-panel pay-panel-net">
+                        <label for="bank">Choose your bank</label>
+                        <select id="bank">
+                            <option>State Bank of India</option><option>HDFC Bank</option><option>ICICI Bank</option>
+                            <option>Axis Bank</option><option>Kotak Mahindra Bank</option><option>Punjab National Bank</option>
+                        </select>
+                    </div>
+
+                    <div class="pay-panel pay-panel-cod">
+                        <p>Pay in cash or by UPI to the delivery partner when your order arrives.</p>
+                    </div>
+                </fieldset>
+            </div>
+
+            <aside class="checkout-summary">
+                <h2>Order summary</h2>
+                <ul>
+                    <li><span>Item price</span><span>As listed</span></li>
+                    <li><span>Delivery</span><span>Calculated at dispatch</span></li>
+                    <li><span>Returns</span><span>Size exchange in 7 days</span></li>
+                </ul>
+                <button type="submit" class="co-submit">Place order</button>
+                <p class="co-fine">By placing this demo order you agree to nothing, because no real order is made.</p>
+                <p><a href="merchandise.html">← Back to merchandise</a></p>
+            </aside>
+        </form>
+    </main>
+
+    <footer>
+        <p>ChronoEarth — B.Tech CSE Project</p>
+    </footer>
+
+</body>
+</html>
