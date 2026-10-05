@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,54 +7,277 @@
     <link rel="stylesheet" href="../css/main.css">
 </head>
 <body class="theme-void">
+    <input type="checkbox" id="theme-switch" class="theme-switch" aria-label="Switch between dark and light mode">
+    <label for="theme-switch" class="theme-toggle theme-corner"><span class="when-dark">Light mode</span><span class="when-light">Dark mode</span></label>
 
     <header>
         <nav>
-            <a href="../index.html">ChronoEarth</a>
+            <a href="../index.html" class="brand"><img src="../images/logo-dark.svg" alt="ChronoEarth logo" class="logo-small logo-dark"><img src="../images/logo-light.svg" alt="" class="logo-small logo-light">ChronoEarth</a>
+            <a href="merchandise.html">Merchandise</a>
+            <a href="login.html">Log out</a>
+            <a href="peoples.html">Peoples</a>
         </nav>
     </header>
 
     <main>
         <h1>Test Your Deep Time Knowledge</h1>
+        <p class="quiz-intro">Eight questions drawn from the ChronoEarth pages, each from a different topic. Pick one of the five answers; open the hint if you need a nudge.</p>
 
-        <!-- Quiz Container: JS will inject questions here -->
-        <div id="quiz-app">
-            
-            <!-- Question View -->
-            <div id="question-view">
-                <div id="progress-bar">Question 1 of 10</div>
-                <h2 id="question-text">Loading question...</h2>
-                <div id="options-container">
-                    <!-- JS will generate: <button class="option-btn">...</button> -->
+        <form class="quiz">
+
+            <fieldset class="quiz-q">
+                <legend>Question 1 of 8 <span class="quiz-topic">· Formation of the Earth</span></legend>
+                <p class="quiz-question">The oldest known terrestrial minerals, dated to about 4.4 billion years, come from the Jack Hills of Western Australia. What are they?</p>
+
+                <details class="quiz-hint">
+                    <summary>💡 Show hint</summary>
+                    <p>These tiny crystals have oxygen isotope ratios that suggest liquid water existed on Earth surprisingly early. They are also used in uranium-lead dating.</p>
+                </details>
+
+                <div class="quiz-options">
+                    <input type="radio" name="q1" id="q1a">
+                    <label for="q1a"><span class="opt-letter">A</span>Chondrite meteorites</label>
+                    <input type="radio" name="q1" id="q1b">
+                    <label for="q1b"><span class="opt-letter">B</span>Banded iron formations</label>
+                    <input type="radio" name="q1" id="q1c">
+                    <label for="q1c"><span class="opt-letter">C</span>Shocked quartz</label>
+                    <input type="radio" name="q1" id="q1d" class="correct">
+                    <label for="q1d"><span class="opt-letter">D</span>Zircon crystals</label>
+                    <input type="radio" name="q1" id="q1e">
+                    <label for="q1e"><span class="opt-letter">E</span>Cap carbonates</label>
                 </div>
-            </div>
 
-            <!-- Feedback View (hidden by default) -->
-            <div id="feedback-view" class="hidden">
-                <div id="feedback-icon"></div>
-                <p id="feedback-text"></p>
-                <a id="learn-more-link" href="#" class="hidden">📖 Learn More</a>
-                <button id="next-btn">Continue</button>
-            </div>
+                <div class="quiz-feedback quiz-right" role="status">
+                    <p><strong>✅ Correct!</strong> Zircon crystals from the Jack Hills are the oldest known terrestrial minerals (4.4 billion years). Chondrite meteorites, by contrast, date the solar system at 4.567 billion years. <a href="formation.html">📖 Learn more</a></p>
+                </div>
+                <div class="quiz-feedback quiz-wrong" role="status">
+                    <p><strong>❌ Not quite.</strong> The answer is <strong>Zircon crystals</strong>. Zircon crystals from the Jack Hills are the oldest known terrestrial minerals (4.4 billion years). Chondrite meteorites, by contrast, date the solar system at 4.567 billion years. <a href="formation.html">📖 Learn more</a></p>
+                </div>
+            </fieldset>
 
-            <!-- Results View (hidden by default) -->
-            <div id="results-view" class="hidden">
-                <h2>Your Score: <span id="final-score">0</span>/10</h2>
-                <div id="score-message"></div>
-                <div id="weak-topics"></div>
-                <button id="retry-btn">Try Again</button>
+            <fieldset class="quiz-q">
+                <legend>Question 2 of 8 <span class="quiz-topic">· Moon Formation</span></legend>
+                <p class="quiz-question">Which Mars-sized protoplanet is believed to have struck the young Earth, creating the Moon?</p>
+
+                <details class="quiz-hint">
+                    <summary>💡 Show hint</summary>
+                    <p>Its name comes from a Greek Titan who was the mythological mother of Selene, the goddess of the Moon.</p>
+                </details>
+
+                <div class="quiz-options">
+                    <input type="radio" name="q2" id="q2a">
+                    <label for="q2a"><span class="opt-letter">A</span>Selene</label>
+                    <input type="radio" name="q2" id="q2b">
+                    <label for="q2b"><span class="opt-letter">B</span>Chicxulub</label>
+                    <input type="radio" name="q2" id="q2c" class="correct">
+                    <label for="q2c"><span class="opt-letter">C</span>Theia</label>
+                    <input type="radio" name="q2" id="q2d">
+                    <label for="q2d"><span class="opt-letter">D</span>Rodinia</label>
+                    <input type="radio" name="q2" id="q2e">
+                    <label for="q2e"><span class="opt-letter">E</span>Panthalassa</label>
+                </div>
+
+                <div class="quiz-feedback quiz-right" role="status">
+                    <p><strong>✅ Correct!</strong> Theia was about half the diameter of Earth. Its dense iron core merged with Earth&#x27;s core, which is why the Moon has such a tiny iron core. <a href="moon-formation.html">📖 Learn more</a></p>
+                </div>
+                <div class="quiz-feedback quiz-wrong" role="status">
+                    <p><strong>❌ Not quite.</strong> The answer is <strong>Theia</strong>. Theia was about half the diameter of Earth. Its dense iron core merged with Earth&#x27;s core, which is why the Moon has such a tiny iron core. <a href="moon-formation.html">📖 Learn more</a></p>
+                </div>
+            </fieldset>
+
+            <fieldset class="quiz-q">
+                <legend>Question 3 of 8 <span class="quiz-topic">· Great Oxidation Event</span></legend>
+                <p class="quiz-question">Which organisms produced the oxygen that began accumulating in the atmosphere about 2.4 billion years ago?</p>
+
+                <details class="quiz-hint">
+                    <summary>💡 Show hint</summary>
+                    <p>They were photosynthetic microorganisms that split water molecules using sunlight, releasing O₂ as a by-product.</p>
+                </details>
+
+                <div class="quiz-options">
+                    <input type="radio" name="q3" id="q3a">
+                    <label for="q3a"><span class="opt-letter">A</span>Trilobites</label>
+                    <input type="radio" name="q3" id="q3b" class="correct">
+                    <label for="q3b"><span class="opt-letter">B</span>Cyanobacteria</label>
+                    <input type="radio" name="q3" id="q3c">
+                    <label for="q3c"><span class="opt-letter">C</span>Anomalocaris</label>
+                    <input type="radio" name="q3" id="q3d">
+                    <label for="q3d"><span class="opt-letter">D</span>Fusulinid foraminifera</label>
+                    <input type="radio" name="q3" id="q3e">
+                    <label for="q3e"><span class="opt-letter">E</span>Ediacaran biota</label>
+                </div>
+
+                <div class="quiz-feedback quiz-right" role="status">
+                    <p><strong>✅ Correct!</strong> Cyanobacteria had probably been making oxygen for hundreds of millions of years, but dissolved iron, volcanic gases and surface minerals absorbed it until the Great Oxidation Event. <a href="great-oxidation.html">📖 Learn more</a></p>
+                </div>
+                <div class="quiz-feedback quiz-wrong" role="status">
+                    <p><strong>❌ Not quite.</strong> The answer is <strong>Cyanobacteria</strong>. Cyanobacteria had probably been making oxygen for hundreds of millions of years, but dissolved iron, volcanic gases and surface minerals absorbed it until the Great Oxidation Event. <a href="great-oxidation.html">📖 Learn more</a></p>
+                </div>
+            </fieldset>
+
+            <fieldset class="quiz-q">
+                <legend>Question 4 of 8 <span class="quiz-topic">· Snowball Earth</span></legend>
+                <p class="quiz-question">Which positive feedback loop drove Snowball Earth glaciation to completion once ice sheets advanced far enough?</p>
+
+                <details class="quiz-hint">
+                    <summary>💡 Show hint</summary>
+                    <p>Ice and snow are highly reflective, so more of the Sun&#x27;s light bounced back to space, cooling the planet and growing more ice.</p>
+                </details>
+
+                <div class="quiz-options">
+                    <input type="radio" name="q4" id="q4a" class="correct">
+                    <label for="q4a"><span class="opt-letter">A</span>The ice-albedo feedback</label>
+                    <input type="radio" name="q4" id="q4b">
+                    <label for="q4b"><span class="opt-letter">B</span>The runaway greenhouse effect</label>
+                    <input type="radio" name="q4" id="q4c">
+                    <label for="q4c"><span class="opt-letter">C</span>Methane clathrate release</label>
+                    <input type="radio" name="q4" id="q4d">
+                    <label for="q4d"><span class="opt-letter">D</span>Ozone layer depletion</label>
+                    <input type="radio" name="q4" id="q4e">
+                    <label for="q4e"><span class="opt-letter">E</span>Lunar tidal friction</label>
+                </div>
+
+                <div class="quiz-feedback quiz-right" role="status">
+                    <p><strong>✅ Correct!</strong> The high reflectivity (albedo) of ice cooled the planet further, which created more ice. Only a huge build-up of volcanic CO₂ under the ice finally overwhelmed it. <a href="snowball-earth.html">📖 Learn more</a></p>
+                </div>
+                <div class="quiz-feedback quiz-wrong" role="status">
+                    <p><strong>❌ Not quite.</strong> The answer is <strong>The ice-albedo feedback</strong>. The high reflectivity (albedo) of ice cooled the planet further, which created more ice. Only a huge build-up of volcanic CO₂ under the ice finally overwhelmed it. <a href="snowball-earth.html">📖 Learn more</a></p>
+                </div>
+            </fieldset>
+
+            <fieldset class="quiz-q">
+                <legend>Question 5 of 8 <span class="quiz-topic">· Cambrian Explosion</span></legend>
+                <p class="quiz-question">Which small, leaf-shaped Burgess Shale swimmer is considered one of the earliest known chordates?</p>
+
+                <details class="quiz-hint">
+                    <summary>💡 Show hint</summary>
+                    <p>It belongs to the group that would eventually give rise to all vertebrates, including humans.</p>
+                </details>
+
+                <div class="quiz-options">
+                    <input type="radio" name="q5" id="q5a">
+                    <label for="q5a"><span class="opt-letter">A</span>Hallucigenia</label>
+                    <input type="radio" name="q5" id="q5b">
+                    <label for="q5b"><span class="opt-letter">B</span>Opabinia</label>
+                    <input type="radio" name="q5" id="q5c">
+                    <label for="q5c"><span class="opt-letter">C</span>Wiwaxia</label>
+                    <input type="radio" name="q5" id="q5d">
+                    <label for="q5d"><span class="opt-letter">D</span>Anomalocaris</label>
+                    <input type="radio" name="q5" id="q5e" class="correct">
+                    <label for="q5e"><span class="opt-letter">E</span>Pikaia</label>
+                </div>
+
+                <div class="quiz-feedback quiz-right" role="status">
+                    <p><strong>✅ Correct!</strong> Pikaia is one of the earliest known chordates. The other Burgess Shale animals listed were a spiny worm, a five-eyed arthropod, an armored slug-like creature and a meter-long predator. <a href="cambrian.html">📖 Learn more</a></p>
+                </div>
+                <div class="quiz-feedback quiz-wrong" role="status">
+                    <p><strong>❌ Not quite.</strong> The answer is <strong>Pikaia</strong>. Pikaia is one of the earliest known chordates. The other Burgess Shale animals listed were a spiny worm, a five-eyed arthropod, an armored slug-like creature and a meter-long predator. <a href="cambrian.html">📖 Learn more</a></p>
+                </div>
+            </fieldset>
+
+            <fieldset class="quiz-q">
+                <legend>Question 6 of 8 <span class="quiz-topic">· Permian Extinction</span></legend>
+                <p class="quiz-question">Which huge volcanic event was the primary trigger of the &quot;Great Dying&quot; about 252 million years ago?</p>
+
+                <details class="quiz-hint">
+                    <summary>💡 Show hint</summary>
+                    <p>Flood basalt eruptions lasting roughly 2 million years covered an area about equal to Western Europe, around 7 million km².</p>
+                </details>
+
+                <div class="quiz-options">
+                    <input type="radio" name="q6" id="q6a">
+                    <label for="q6a"><span class="opt-letter">A</span>The Deccan Traps</label>
+                    <input type="radio" name="q6" id="q6b" class="correct">
+                    <label for="q6b"><span class="opt-letter">B</span>The Siberian Traps</label>
+                    <input type="radio" name="q6" id="q6c">
+                    <label for="q6c"><span class="opt-letter">C</span>The Toba eruption</label>
+                    <input type="radio" name="q6" id="q6d">
+                    <label for="q6d"><span class="opt-letter">D</span>The Late Heavy Bombardment</label>
+                    <input type="radio" name="q6" id="q6e">
+                    <label for="q6e"><span class="opt-letter">E</span>The Chicxulub impact</label>
+                </div>
+
+                <div class="quiz-feedback quiz-right" role="status">
+                    <p><strong>✅ Correct!</strong> The Siberian Traps released enormous amounts of CO₂ and SO₂, driving warming of 8–10°C, ocean anoxia and acidification. About 96% of marine species were wiped out. <a href="permian-extinction.html">📖 Learn more</a></p>
+                </div>
+                <div class="quiz-feedback quiz-wrong" role="status">
+                    <p><strong>❌ Not quite.</strong> The answer is <strong>The Siberian Traps</strong>. The Siberian Traps released enormous amounts of CO₂ and SO₂, driving warming of 8–10°C, ocean anoxia and acidification. About 96% of marine species were wiped out. <a href="permian-extinction.html">📖 Learn more</a></p>
+                </div>
+            </fieldset>
+
+            <fieldset class="quiz-q">
+                <legend>Question 7 of 8 <span class="quiz-topic">· K-Pg Extinction</span></legend>
+                <p class="quiz-question">In 1980, Luis and Walter Alvarez found a thin clay layer at the K-Pg boundary enriched in which element?</p>
+
+                <details class="quiz-hint">
+                    <summary>💡 Show hint</summary>
+                    <p>It is rare on Earth&#x27;s surface but abundant in asteroids, and the layer has been found at over 350 sites worldwide.</p>
+                </details>
+
+                <div class="quiz-options">
+                    <input type="radio" name="q7" id="q7a">
+                    <label for="q7a"><span class="opt-letter">A</span>Uranium</label>
+                    <input type="radio" name="q7" id="q7b">
+                    <label for="q7b"><span class="opt-letter">B</span>Sulfur</label>
+                    <input type="radio" name="q7" id="q7c">
+                    <label for="q7c"><span class="opt-letter">C</span>Calcium</label>
+                    <input type="radio" name="q7" id="q7d" class="correct">
+                    <label for="q7d"><span class="opt-letter">D</span>Iridium</label>
+                    <input type="radio" name="q7" id="q7e">
+                    <label for="q7e"><span class="opt-letter">E</span>Nickel</label>
+                </div>
+
+                <div class="quiz-feedback quiz-right" role="status">
+                    <p><strong>✅ Correct!</strong> The iridium layer is key evidence for the Chicxulub asteroid impact that ended the 165-million-year reign of the dinosaurs. <a href="kpg-extinction.html">📖 Learn more</a></p>
+                </div>
+                <div class="quiz-feedback quiz-wrong" role="status">
+                    <p><strong>❌ Not quite.</strong> The answer is <strong>Iridium</strong>. The iridium layer is key evidence for the Chicxulub asteroid impact that ended the 165-million-year reign of the dinosaurs. <a href="kpg-extinction.html">📖 Learn more</a></p>
+                </div>
+            </fieldset>
+
+            <fieldset class="quiz-q">
+                <legend>Question 8 of 8 <span class="quiz-topic">· Human Evolution</span></legend>
+                <p class="quiz-question">Which hominin species was the first to leave Africa and spread to the Middle East, Asia and Indonesia?</p>
+
+                <details class="quiz-hint">
+                    <summary>💡 Show hint</summary>
+                    <p>It had a tall, long-legged, narrow-hipped body suited to endurance running, mastered fire by about 1 million years ago and made Acheulean hand axes.</p>
+                </details>
+
+                <div class="quiz-options">
+                    <input type="radio" name="q8" id="q8a">
+                    <label for="q8a"><span class="opt-letter">A</span>Homo habilis</label>
+                    <input type="radio" name="q8" id="q8b">
+                    <label for="q8b"><span class="opt-letter">B</span>Homo heidelbergensis</label>
+                    <input type="radio" name="q8" id="q8c" class="correct">
+                    <label for="q8c"><span class="opt-letter">C</span>Homo erectus</label>
+                    <input type="radio" name="q8" id="q8d">
+                    <label for="q8d"><span class="opt-letter">D</span>Australopithecus afarensis</label>
+                    <input type="radio" name="q8" id="q8e">
+                    <label for="q8e"><span class="opt-letter">E</span>Homo neanderthalensis</label>
+                </div>
+
+                <div class="quiz-feedback quiz-right" role="status">
+                    <p><strong>✅ Correct!</strong> Homo erectus had a modern body plan and a brain of 900–1100 cm³. Homo habilis (&quot;Handy Man&quot;) stayed in Africa and used simple Oldowan tools. <a href="human-evolution.html">📖 Learn more</a></p>
+                </div>
+                <div class="quiz-feedback quiz-wrong" role="status">
+                    <p><strong>❌ Not quite.</strong> The answer is <strong>Homo erectus</strong>. Homo erectus had a modern body plan and a brain of 900–1100 cm³. Homo habilis (&quot;Handy Man&quot;) stayed in Africa and used simple Oldowan tools. <a href="human-evolution.html">📖 Learn more</a></p>
+                </div>
+            </fieldset>
+
+            <section class="quiz-result" aria-live="polite">
+                <h2>Your Score: <span class="quiz-score"></span> / 8</h2>
+                <p>Revisit the "Learn more" links on any question you missed, then try again.</p>
+                <button type="reset">Try Again</button>
                 <a href="../index.html">← Back to Timeline</a>
-            </div>
+            </section>
 
-        </div>
+        </form>
     </main>
 
     <footer>
         <p>ChronoEarth — B.Tech CSE Project</p>
     </footer>
-
-    <!-- PHASE 3: <script src="../js/quiz-data.js"></script> -->
-    <!-- PHASE 3: <script src="../js/quiz.js"></script> -->
 
 </body>
 </html>

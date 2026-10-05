@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="ChronoEarth logo">
+  <circle cx="32" cy="32" r="22" fill="none" stroke="#1a1d23" stroke-width="4"/>
+  <path d="M32 10v44M10 32h44" stroke="#1a1d23" stroke-width="2" opacity="0.5"/>
+  <path d="M32 10c-14 10-14 34 0 44M32 10c14 10 14 34 0 44" fill="none" stroke="#1a1d23" stroke-width="2" opacity="0.5"/>
+  <path d="M32 32V16" stroke="#1d4ed8" stroke-width="4" stroke-linecap="round"/>
+  <path d="M32 32l10 6" stroke="#1d4ed8" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="32" cy="32" r="3.5" fill="#1d4ed8"/>
+  <path d="M6 32a26 26 0 0 1 8-18" fill="none" stroke="#1d4ed8" stroke-width="3" stroke-linecap="round"/>
+</svg>
