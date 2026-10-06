@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChronoEarth — A Journey Through Deep Time</title>
+    <meta name="description" content="Explore 4.5 billion years of Earth's history. From molten rock to modern civilization — one eon at a time.">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="theme-void">
+    <input type="checkbox" id="theme-switch" class="theme-switch" aria-label="Switch between dark and light mode">
+    <label for="theme-switch" class="theme-toggle theme-corner"><span class="when-dark">Light mode</span><span class="when-light">Dark mode</span></label>
+
+    <!-- ==================== HEADER / NAVIGATION ==================== -->
+    <header class="home-header">
+        <a href="home.html" class="brand-center"><img src="images/logo-dark.svg" alt="ChronoEarth logo" class="brand-logo logo-dark"><img src="images/logo-light.svg" alt="" class="brand-logo logo-light"><span class="brand-name">ChronoEarth</span></a>
+        <nav>
+            <a href="#master-timeline">Timeline</a>
+            <a href="pages/quiz.html">Quiz</a>
+            <a href="pages/merchandise.html">Merchandise</a>
+            <a href="#about">About</a>
+            <a href="index.html#logged-out">Log out</a>
+            <a href="pages/peoples.html">Peoples</a>
+        </nav>
+    </header>
+
+    <!-- ==================== MASTER TIMELINE ==================== -->
+    <section id="portal">
+        <h1 class="visually-hidden">ChronoEarth — 4.5 Billion Years in Every Scroll</h1>
+
+        <div class="tl-viewer" id="master-timeline">
+            <div class="tl-viewer-inner">
+                <nav class="tl-rail" aria-label="Jump to an era"><a class="c-magma" href="#tl-formation"><b>4.6 Ga</b><span>Formation</span></a><a class="c-magma" href="#tl-moon-formation"><b>4.5 Ga</b><span>Moon</span></a><a class="c-magma" href="#tl-hadean"><b>4.6–4.0 Ga</b><span>Hadean</span></a><a class="c-ocean" href="#tl-archean"><b>4.0–2.5 Ga</b><span>Archean</span></a><a class="c-ocean" href="#tl-great-oxidation"><b>2.4–2.0 Ga</b><span>Oxygen</span></a><a class="c-ocean" href="#tl-proterozoic"><b>2.5 Ga–541 Ma</b><span>Proterozoic</span></a><a class="c-ice" href="#tl-snowball-earth"><b>720–635 Ma</b><span>Snowball</span></a><a class="c-jungle" href="#tl-cambrian"><b>541–485 Ma</b><span>Cambrian</span></a><a class="c-jungle" href="#tl-ordovician-silurian"><b>485–419 Ma</b><span>Ordovician</span></a><a class="c-jungle" href="#tl-devonian"><b>419–359 Ma</b><span>Devonian</span></a><a class="c-jungle" href="#tl-carboniferous"><b>359–299 Ma</b><span>Carboniferous</span></a><a class="c-jungle" href="#tl-permian-extinction"><b>252 Ma</b><span>Great Dying</span></a><a class="c-amber" href="#tl-mesozoic"><b>252–66 Ma</b><span>Mesozoic</span></a><a class="c-amber" href="#tl-kpg-extinction"><b>66 Ma</b><span>K-Pg</span></a><a class="c-blue" href="#tl-cenozoic"><b>66 Ma–today</b><span>Cenozoic</span></a><a class="c-blue" href="#tl-human-evolution"><b>7 Ma–today</b><span>Humans</span></a><a class="c-blue" href="#tl-anthropocene"><b>~1950–today</b><span>Anthropocene</span></a><span class="rail-sep">Deep dives</span><a class="c-blue" href="#tl-plate-tectonics"><b>All of time</b><span>Plate Tectonics</span></a><a class="c-amber" href="#tl-mass-extinctions"><b>445–66 Ma</b><span>Big Five Extinctions</span></a><a class="c-blue" href="#tl-atmosphere"><b>All of time</b><span>The Atmosphere</span></a></nav>
+                <ol class="tl-scroller">
+                <li class="tl-card c-magma" id="tl-formation">
+                    <a class="tl-photo" href="pages/formation.html" tabindex="-1" aria-hidden="true"><img src="images/formation.jpg" alt="" loading="lazy"></a>
+                    <div class="tl-body">
+                        <p class="tl-date">4.6 Ga</p>
+                        <h3><a href="pages/formation.html">Formation of the Earth</a></h3>
+                        <p class="tl-short">Earth&#x27;s origin story begins approximately 4.54 billion years ago, emerging from the solar nebula — a colossal, spinning cloud of interstellar gas,…</p>
+                        <div class="tl-foot"><span class="tl-step off">← Start</span><a class="tl-go" href="pages/formation.html">Explore</a><a href="#tl-moon-formation" class="tl-step">Later →</a></div>
+                    </div>
+                </li>
+                <li class="tl-card c-magma" id="tl-moon-formation">
+                    <a class="tl-photo" href="pages/moon-formation.html" tabindex="-1" aria-hidden="true"><img src="images/moon-formation.jpg" alt="" loading="lazy"></a>
+                    <div class="tl-body">
+                        <p class="tl-date">4.5 Ga</p>
+                        <h3><a href="pages/moon-formation.html">Moon Formation</a></h3>
+                        <p class="tl-short">Earth&#x27;s Moon is not just a glowing orb in the night sky; it is the spectacular product of the most violent and catastrophic event in our planet&#x27;s…</p>
+                        <div class="tl-foot"><a href="#tl-formation" class="tl-step">← Earlier</a><a class="tl-go" href="pages/moon-formation.html">Explore</a><a href="#tl-hadean" class="tl-step">Later →</a></div>
+                    </div>
+                </li>
+                <li class="tl-card c-magma" id="tl-hadean">
+                    <a class="tl-photo" href="pages/hadean.html" tabindex="-1" aria-hidden="true"><img src="images/hadean.jpg" alt="" loading="lazy"></a>
+                    <div class="tl-body">
+                        <p class="tl-date">4.6–4.0 Ga</p>
+                        <h3><a href="pages/hadean.html">Hadean Eon</a></h3>
+                        <p class="tl-short">Named after Hades, the Greek god of the underworld, the Hadean Eon represents the most extreme and violent chapter of Earth&#x27;s history, spanning…</p>
+                        <div class="tl-foot"><a href="#tl-moon-formation" class="tl-step">← Earlier</a><a class="tl-go" href="pages/hadean.html">Explore</a><a href="#tl-archean" class="tl-step">Later →</a></div>
+                    </div>
+                </li>
+                <li class="tl-card c-ocean" id="tl-archean">
+                    <a class="tl-photo" href="pages/archean.html" tabindex="-1" aria-hidden="true"><img src="images/archean.jpg" alt="" loading="lazy"></a>
+                    <div class="tl-body">
+                        <p class="tl-date">4.0–2.5 Ga</p>
+                        <h3><a href="pages/archean.html">Archean Eon</a></h3>
+                        <p class="tl-short">Spanning a staggering 1.5 billion years—which constitutes roughly one-third of our planet&#x27;s entire history—the Archean Eon stands as perhaps the…</p>
+                        <div class="tl-foot"><a href="#tl-hadean" class="tl-step">← Earlier</a><a class="tl-go" href="pages/archean.html">Explore</a><a href="#tl-great-oxidation" class="tl-step">Later →</a></div>
+                    </div>
+                </li>
+                <li class="tl-card c-ocean" id="tl-great-oxidation">
+                    <a class="tl-photo" href="pages/great-oxidation.html" tabindex="-1" aria-hidden="true"><img src="images/great-oxidation.jpg" alt="" loading="lazy"></a>
+                    <div class="tl-body">
+                        <p class="tl-date">2.4–2.0 Ga</p>
+                        <h3><a href="pages/great-oxidation.html">The Great Oxidation Event</a></h3>
+                        <p class="tl-short">The Great Oxidation Event (GOE) is arguably the most transformative chemical shift in Earth&#x27;s history.</p>
+                        <div class="tl-foot"><a href="#tl-archean" class="tl-step">← Earlier</a><a class="tl-go" href="pages/great-oxidation.html">Explore</a><a href="#tl-proterozoic" class="tl-step">Later →</a></div>
+                    </div>
+                </li>
+                <li class="tl-card c-ocean" id="tl-proterozoic">
+                    <a class="tl-photo" href="pages/proterozoic.html" tabindex="-1" aria-hidden="true"><img src="images/proterozoic.jpg" alt="" loading="lazy"></a>
+                    <div class="tl-body">
+                        <p class="tl-date">2.5 Ga–541 Ma</p>
+                        <h3><a href="pages/proterozoic.html">Proterozoic Eon</a></h3>
+                        <p class="tl-short">The Proterozoic Eon — meaning &quot;earlier life&quot; — is the longest single eon in Earth&#x27;s history, spanning nearly 2 billion years.</p>
+                        <div class="tl-foot"><a href="#tl-great-oxidation" class="tl-step">← Earlier</a><a class="tl-go" href="pages/proterozoic.html">Explore</a><a href="#tl-snowball-earth" class="tl-step">Later →</a></div>
+                    </div>
+                </li>
+                <li class="tl-card c-ice" id="tl-snowball-earth">
+                    <a class="tl-photo" href="pages/snowball-earth.html" tabindex="-1" aria-hidden="true"><img src="images/snowball-earth.jpg" alt="" loading="lazy"></a>
+                    <div class="tl-body">
+                        <p class="tl-date">720–635 Ma</p>
+                        <h3><a href="pages/snowball-earth.html">Snowball Earth</a></h3>
+                        <p class="tl-short">At least twice during the late Proterozoic, Earth experienced glaciations so extreme that ice sheets may have extended from the poles all the way…</p>
+                        <div class="tl-foot"><a href="#tl-proterozoic" class="tl-step">← Earlier</a><a class="tl-go" href="pages/snowball-earth.html">Explore</a><a href="#tl-cambrian" class="tl-step">Later →</a></div>
+                    </div>
+                </li>
+                <li class="tl-card c-jungle" id="tl-cambrian">
+                    <a class="tl-photo" href="pages/cambrian.html" tabindex="-1" aria-hidden="true"><img src="images/cambrian.jpg" alt="" loading="lazy"></a>
+                    <div class="tl-body">
+                        <p class="tl-date">541–485 Ma</p>
+                        <h3><a href="pages/cambrian.html">The Cambrian Explosion</a></h3>
+                        <p class="tl-short">The Cambrian Explosion is widely considered one of the most dramatic, unprecedented, and mysterious events in the entire history of life on Earth.</p>
+                        <div class="tl-foot"><a href="#tl-snowball-earth" class="tl-step">← Earlier</a><a class="tl-go" href="pages/cambrian.html">Explore</a><a href="#tl-ordovician-silurian" class="tl-step">Later →</a></div>
+                    </div>
+                </li>
+                <li class="tl-card c-jungle" id="tl-ordovician-silurian">
+                    <a class="tl-photo" href="pages/ordovician-silurian.html" tabindex="-1" aria-hidden="true"><img src="images/ordovician-silurian.jpg" alt="" loading="lazy"></a>
+                    <div class="tl-body">
+                        <p class="tl-date">485–419 Ma</p>
+                        <h3><a href="pages/ordovician-silurian.html">Ordovician &amp; Silurian Periods</a></h3>
+                        <p class="tl-short">The Ordovician was a time of incredible marine diversity.</p>
+                        <div class="tl-foot"><a href="#tl-cambrian" class="tl-step">← Earlier</a><a class="tl-go" href="pages/ordovician-silurian.html">Explore</a><a href="#tl-devonian" class="tl-step">Later →</a></div>
+                    </div>
+                </li>
+                <li class="tl-card c-jungle" id="tl-devonian">
+                    <a class="tl-photo" href="pages/devonian.html" tabindex="-1" aria-hidden="true"><img src="images/devonian.jpg" alt="" loading="lazy"></a>
+                    <div class="tl-body">
+                        <p class="tl-date">419–359 Ma</p>
+                        <h3><a href="pages/devonian.html">The Devonian Period</a></h3>
+                        <p class="tl-short">The Devonian Period is known as the &quot;Age of Fishes&quot; for good reason — fish diversified into a staggering array of forms, from armored placoderms…</p>
+                        <div class="tl-foot"><a href="#tl-ordovician-silurian" class="tl-step">← Earlier</a><a class="tl-go" href="pages/devonian.html">Explore</a><a href="#tl-carboniferous" class="tl-step">Later →</a></div>
+                    </div>
+                </li>
+                <li class="tl-card c-jungle" id="tl-carboniferous">
+                    <a class="tl-photo" href="pages/carboniferous.html" tabindex="-1" aria-hidden="true"><img src="images/carboniferous.jpg" alt="" loading="lazy"></a>
+                    <div class="tl-body">
+                        <p class="tl-date">359–299 Ma</p>
+                        <h3><a href="pages/carboniferous.html">The Carboniferous Period</a></h3>
+                        <p class="tl-short">The Carboniferous Period takes its name from carbon — specifically, the vast deposits of coal that formed during this time, which now power much…</p>
+                        <div class="tl-foot"><a href="#tl-devonian" class="tl-step">← Earlier</a><a class="tl-go" href="pages/carboniferous.html">Explore</a><a href="#tl-permian-extinction" class="tl-step">Later →</a></div>
+                    </div>
+                </li>
+                <li class="tl-card c-jungle" id="tl-permian-extinction">
+                    <a class="tl-photo" href="pages/permian-extinction.html" tabindex="-1" aria-hidden="true"><img src="images/permian-extinction.jpg" alt="" loading="lazy"></a>
+                    <div class="tl-body">
+                        <p class="tl-date">252 Ma</p>
+                        <h3><a href="pages/permian-extinction.html">The Permian Extinction</a></h3>
+                        <p class="tl-short">The End-Permian Extinction — known as &quot;The Great Dying&quot; — was the most catastrophic mass extinction in Earth&#x27;s history.</p>
+                        <div class="tl-foot"><a href="#tl-carboniferous" class="tl-step">← Earlier</a><a class="tl-go" href="pages/permian-extinction.html">Explore</a><a href="#tl-mesozoic" class="tl-step">Later →</a></div>
+                    </div>
+                </li>
+                <li class="tl-card c-amber" id="tl-mesozoic">
+                    <a class="tl-photo" href="pages/mesozoic.html" tabindex="-1" aria-hidden="true"><img src="images/mesozoic.jpg" alt="" loading="lazy"></a>
+                    <div class="tl-body">
+                        <p class="tl-date">252–66 Ma</p>
+                        <h3><a href="pages/mesozoic.html">Mesozoic Era</a></h3>
+                        <p class="tl-short">The Mesozoic Era — spanning 186 million years — is the chapter of Earth&#x27;s history dominated by reptiles of extraordinary size and diversity.</p>
+                        <div class="tl-foot"><a href="#tl-permian-extinction" class="tl-step">← Earlier</a><a class="tl-go" href="pages/mesozoic.html">Explore</a><a href="#tl-kpg-extinction" class="tl-step">Later →</a></div>
+                    </div>
+                </li>
+                <li class="tl-card c-amber" id="tl-kpg-extinction">
+                    <a class="tl-photo" href="pages/kpg-extinction.html" tabindex="-1" aria-hidden="true"><img src="images/kpg-extinction.jpg" alt="" loading="lazy"></a>
+                    <div class="tl-body">
+                        <p class="tl-date">66 Ma</p>
+                        <h3><a href="pages/kpg-extinction.html">The K-Pg Extinction</a></h3>
+                        <p class="tl-short">Sixty-six million years ago, a 10–15 km wide asteroid struck what is now the Yucatán Peninsula of Mexico at roughly 20 km/s (72,000 km/h),…</p>
+                        <div class="tl-foot"><a href="#tl-mesozoic" class="tl-step">← Earlier</a><a class="tl-go" href="pages/kpg-extinction.html">Explore</a><a href="#tl-cenozoic" class="tl-step">Later →</a></div>
+                    </div>
+                </li>
+                <li class="tl-card c-blue" id="tl-cenozoic">
+                    <a class="tl-photo" href="pages/cenozoic.html" tabindex="-1" aria-hidden="true"><img src="images/cenozoic.jpg" alt="" loading="lazy"></a>
+                    <div class="tl-body">
+                        <p class="tl-date">66 Ma–today</p>
+                        <h3><a href="pages/cenozoic.html">Cenozoic Era</a></h3>
+                        <p class="tl-short">The Cenozoic Era — meaning &quot;new life&quot; — is the current geological era and the chapter in which mammals, birds, and flowering plants rose to dominance.</p>
+                        <div class="tl-foot"><a href="#tl-kpg-extinction" class="tl-step">← Earlier</a><a class="tl-go" href="pages/cenozoic.html">Explore</a><a href="#tl-human-evolution" class="tl-step">Later →</a></div>
+                    </div>
+                </li>
+                <li class="tl-card c-blue" id="tl-human-evolution">
+                    <a class="tl-photo" href="pages/human-evolution.html" tabindex="-1" aria-hidden="true"><img src="images/human-evolution.jpg" alt="" loading="lazy"></a>
+                    <div class="tl-body">
+                        <p class="tl-date">7 Ma–today</p>
+                        <h3><a href="pages/human-evolution.html">Human Evolution</a></h3>
+                        <p class="tl-short">The story of human evolution is not a straight line from ape to human but a sprawling, branching bush.</p>
+                        <div class="tl-foot"><a href="#tl-cenozoic" class="tl-step">← Earlier</a><a class="tl-go" href="pages/human-evolution.html">Explore</a><a href="#tl-anthropocene" class="tl-step">Later →</a></div>
+                    </div>
+                </li>
+                <li class="tl-card c-blue" id="tl-anthropocene">
+                    <a class="tl-photo" href="pages/anthropocene.html" tabindex="-1" aria-hidden="true"><img src="images/anthropocene.jpg" alt="" loading="lazy"></a>
+                    <div class="tl-body">
+                        <p class="tl-date">~1950–today</p>
+                        <h3><a href="pages/anthropocene.html">The Anthropocene</a></h3>
+                        <p class="tl-short">The Anthropocene is a proposed geological epoch defined by the pervasive and lasting impact of human activity on Earth&#x27;s geology, climate, and…</p>
+                        <div class="tl-foot"><a href="#tl-human-evolution" class="tl-step">← Earlier</a><a class="tl-go" href="pages/anthropocene.html">Explore</a><a href="#tl-plate-tectonics" class="tl-step">Later →</a></div>
+                    </div>
+                </li>
+                <li class="tl-divider" aria-hidden="true"><span>Beyond the timeline<br>Deep dives</span></li>
+                <li class="tl-card c-blue" id="tl-plate-tectonics">
+                    <a class="tl-photo" href="pages/plate-tectonics.html" tabindex="-1" aria-hidden="true"><img src="images/plate-tectonics.jpg" alt="" loading="lazy"></a>
+                    <div class="tl-body">
+                        <p class="tl-date">All of time</p>
+                        <h3><a href="pages/plate-tectonics.html">Plate Tectonics</a></h3>
+                        <p class="tl-short">Plate tectonics is the unifying theory of geology — the framework that explains earthquakes, volcanoes, mountain building, ocean basin formation,…</p>
+                        <div class="tl-foot"><a href="#tl-anthropocene" class="tl-step">← Earlier</a><a class="tl-go" href="pages/plate-tectonics.html">Explore</a><a href="#tl-mass-extinctions" class="tl-step">Later →</a></div>
+                    </div>
+                </li>
+                <li class="tl-card c-amber" id="tl-mass-extinctions">
+                    <a class="tl-photo" href="pages/mass-extinctions.html" tabindex="-1" aria-hidden="true"><img src="images/mass-extinctions.jpg" alt="" loading="lazy"></a>
+                    <div class="tl-body">
+                        <p class="tl-date">445–66 Ma</p>
+                        <h3><a href="pages/mass-extinctions.html">The Big Five Mass Extinctions</a></h3>
+                        <p class="tl-short">Over the past 500 million years, Earth has experienced five catastrophic mass extinction events — episodes in which a significant proportion of…</p>
+                        <div class="tl-foot"><a href="#tl-plate-tectonics" class="tl-step">← Earlier</a><a class="tl-go" href="pages/mass-extinctions.html">Explore</a><a href="#tl-atmosphere" class="tl-step">Later →</a></div>
+                    </div>
+                </li>
+                <li class="tl-card c-blue" id="tl-atmosphere">
+                    <a class="tl-photo" href="pages/atmosphere.html" tabindex="-1" aria-hidden="true"><img src="images/atmosphere.jpg" alt="" loading="lazy"></a>
+                    <div class="tl-body">
+                        <p class="tl-date">All of time</p>
+                        <h3><a href="pages/atmosphere.html">Evolution of the Atmosphere</a></h3>
+                        <p class="tl-short">Earth&#x27;s atmosphere has been reinvented multiple times over 4.5 billion years.</p>
+                        <div class="tl-foot"><a href="#tl-mass-extinctions" class="tl-step">← Earlier</a><a class="tl-go" href="pages/atmosphere.html">Explore</a><span class="tl-step off">End →</span></div>
+                    </div>
+                </li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== TIMELINE OVERVIEW ==================== -->
+    <section id="timeline">
+        <h2>The Geological Timeline</h2>
+        <p>Click any era to begin exploring.</p>
+
+        <article id="precambrian">
+            <h3>Precambrian Supereon</h3>
+            <p>4.6 billion – 541 million years ago</p>
+            <p>Spanning over 4 billion years, the Precambrian represents the vast, foundational chapter of Earth's history. It begins with the formation of our planet from a hellish, molten state and encompasses the cooling of the crust, the formation of the first oceans, and the origin of life itself.</p>
+            
+            <div class="image-placeholder">
+                <img src="images/index.jpg" alt="Deep space void — the beginning of time">
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="pages/formation.html">Formation of Earth</a></li>
+                    <li><a href="pages/moon-formation.html">Moon Formation</a></li>
+                    <li><a href="pages/hadean.html">Hadean Eon</a></li>
+                    <li><a href="pages/archean.html">Archean Eon</a></li>
+                    <li><a href="pages/great-oxidation.html">Great Oxidation</a></li>
+                    <li><a href="pages/proterozoic.html">Proterozoic Eon</a></li>
+                    <li><a href="pages/snowball-earth.html">Snowball Earth</a></li>
+                </ul>
+            </nav>
+        </article>
+
+        <article id="paleozoic">
+            <h3>Paleozoic Era</h3>
+            <p>541 – 252 million years ago</p>
+            <p>The Paleozoic Era, meaning "ancient life," marks a time of dramatic biological and geological change. It kicked off with the Cambrian Explosion, an unprecedented burst of evolutionary innovation that introduced most major animal groups.</p>
+            
+            <div class="image-placeholder">
+                <img src="images/cambrian.jpg" alt="Paleozoic Era — ancient marine life">
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="pages/cambrian.html">Cambrian Explosion</a></li>
+                    <li><a href="pages/ordovician-silurian.html">Ordovician &amp; Silurian</a></li>
+                    <li><a href="pages/devonian.html">Devonian</a></li>
+                    <li><a href="pages/carboniferous.html">Carboniferous</a></li>
+                    <li><a href="pages/permian-extinction.html">Permian Extinction</a></li>
+                </ul>
+            </nav>
+        </article>
+
+        <article id="mesozoic">
+            <h3>Mesozoic Era</h3>
+            <p>252 – 66 million years ago</p>
+            <p>Often referred to as the "Age of Reptiles," the Mesozoic Era is best known as the time when dinosaurs dominated the Earth. This era saw the breakup of Pangea, the evolution of the first birds and mammals, and the rise of flowering plants.</p>
+            
+            <div class="image-placeholder">
+                <img src="images/mesozoic.jpg" alt="Mesozoic Era — age of dinosaurs">
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="pages/mesozoic.html">Mesozoic Era</a></li>
+                    <li><a href="pages/kpg-extinction.html">K-Pg Extinction</a></li>
+                </ul>
+            </nav>
+        </article>
+
+        <article id="cenozoic">
+            <h3>Cenozoic Era</h3>
+            <p>66 million years ago – Present</p>
+            <p>The Cenozoic Era, known as the "Age of Mammals," spans the last 66 million years. In the wake of the dinosaur extinction, small survivors evolved and diversified, leading to repeated ice ages and the emergence of modern humans.</p>
+            
+            <div class="image-placeholder">
+                <img src="images/cenozoic.jpg" alt="Cenozoic Era — age of mammals">
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="pages/cenozoic.html">Cenozoic Era</a></li>
+                    <li><a href="pages/human-evolution.html">Human Evolution</a></li>
+                    <li><a href="pages/anthropocene.html">Anthropocene</a></li>
+                </ul>
+            </nav>
+        </article>
+
+        <article id="deep-dives">
+            <h3>Deep Dives</h3>
+            <p>Cross-cutting forces that span billions of years</p>
+            <p>Explore the most significant recurring themes in Earth's history, from the relentless cycle of plate tectonics to the catastrophic Big Five mass extinctions and the evolution of our atmosphere.</p>
+            
+            <div class="image-placeholder">
+                <img src="images/atmosphere.jpg" alt="Earth's atmosphere — deep dives">
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="pages/plate-tectonics.html">Plate Tectonics</a></li>
+                    <li><a href="pages/mass-extinctions.html">The Big Five Extinctions</a></li>
+                    <li><a href="pages/atmosphere.html">Evolution of the Atmosphere</a></li>
+                </ul>
+            </nav>
+        </article>
+    </section>
+
+    <!-- ==================== FEATURE PREVIEW ==================== -->
+    <section id="features">
+        <h2>What You'll Discover</h2>
+        
+        <article>
+            <h3>Interactive Timeline</h3>
+            <p>Scroll through deep time with our geological clock.</p>
+        </article>
+        
+        <article>
+            <h3>Branching Quiz</h3>
+            <p>Test your knowledge and learn from your mistakes.</p>
+            <a href="pages/quiz.html">Take the Quiz</a>
+        </article>
+        
+        <article>
+            <h3>Rich Visual Content</h3>
+            <p>Era-specific color palettes and atmospheric storytelling.</p>
+        </article>
+    </section>
+
+    <!-- ==================== DID YOU KNOW? ==================== -->
+    <section id="fact">
+        <h2>Did You Know?</h2>
+        <p>If Earth's entire history were compressed into a single 24-hour day, humans would appear at 11:59 PM.</p>
+    </section>
+
+    <!-- ==================== ABOUT / TEAM ==================== -->
+    <section id="about">
+        <h2>About ChronoEarth</h2>
+        <p>
+            ChronoEarth is an educational web project developed by a team of four 
+            B.Tech CSE students at Amrita Vishwa Vidyapeetham. Built entirely with 
+            HTML and CSS only (no JavaScript), it demonstrates the application of modern 
+            frontend development principles to scientific storytelling.
+        </p>
+        
+        <h3>The Team</h3>
+        <ul>
+            <li><strong>Malavya</strong> — Project Architect &amp; Integration</li>
+            <li><strong>Divya</strong> — Content Lead &amp; Research</li>
+            <li><strong>Sravan</strong> — Visual Design &amp; UX</li>
+            <li><strong>Aravind</strong> — Interactivity &amp; Logic</li>
+        </ul>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer>
+        <p>ChronoEarth — B.Tech CSE Project | Amrita Vishwa Vidyapeetham</p>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="pages/quiz.html">Quiz</a>
+            <a href="#about">About</a>
+        </nav>
+        <p><small>All geological data verified against peer-reviewed sources.</small></p>
+    </footer>
+
+</body>
+</html>

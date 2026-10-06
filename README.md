@@ -23,7 +23,8 @@ ChronoEarth is an educational web project that takes users on an interactive jou
 
 ```
 chronoearth-master/
-├── index.html              ← Main landing page with timeline overview
+├── index.html              ← Login page (the site opens here)
+├── home.html               ← Main landing page with timeline overview
 ├── assets/
 │   └── images/             ← Visual assets (Phase 2)
 ├── components/             ← Reusable HTML components (Phase 2)
@@ -53,7 +54,6 @@ chronoearth-master/
     ├── merchandise.html        Merchandise store with size chart
     ├── checkout.html           Checkout with payment methods (demo)
     ├── order-confirmed.html    Order confirmation
-    └── login.html              Login page
 ```
 
 ---
@@ -62,7 +62,7 @@ chronoearth-master/
 
 ### Phase 1 — HTML Structure & Content ✅ Complete
 
-- [x] Main landing page (`index.html`) with full semantic structure
+- [x] Main landing page (`home.html`) with full semantic structure
 - [x] 17 timeline pages with comprehensive educational content
 - [x] 3 deep-dive pages (Plate Tectonics, Mass Extinctions, Atmosphere)
 - [x] Quiz page UI skeleton (`quiz.html`)
@@ -81,7 +81,7 @@ chronoearth-master/
 
 ### Phase 3 — HTML & CSS Features ✅ Complete
 
-- [x] Login page (HTML validation only) with logout links
+- [x] Login page as the entry point (`index.html`, HTML validation only: admin / admin) with logout links that return to it
 - [x] Light / dark mode toggle (CSS only)
 - [x] 8-question quiz with hints, 5 options each and a CSS score counter
 - [x] Merchandise page with size chart, checkout and payment methods
