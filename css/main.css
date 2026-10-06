@@ -801,10 +801,7 @@ footer small {
     --border-default: rgba(200, 160, 80, 0.12);
 }
 
-/* 7. BLUE — Modern Earth (cenozoic, human-evolution, anthropocene, atmosphere, plate-tectonics) */
-.theme-blue {
-    /* Uses default :root values */
-}
+/* 7. BLUE — Modern Earth (cenozoic, human-evolution, anthropocene, atmosphere, plate-tectonics) — uses default :root values */
 
 /* ==================== LOGIN PAGE ==================== */
 .login-page {
