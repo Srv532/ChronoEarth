@@ -2,7 +2,7 @@
 
 **4.5 Billion Years in Every Scroll**
 
-ChronoEarth is an educational web project that takes users on an interactive journey through the complete geological history of Earth — from a molten ball of rock to the Anthropocene. Built entirely with HTML, CSS, and JavaScript.
+ChronoEarth is an educational web project that takes users on an interactive journey through the complete geological history of Earth — from a molten ball of rock to the Anthropocene. Built entirely with HTML and CSS (no JavaScript).
 
 > B.Tech CSE Project — Amrita Vishwa Vidyapeetham
 
@@ -23,12 +23,12 @@ ChronoEarth is an educational web project that takes users on an interactive jou
 
 ```
 chronoearth-master/
-├── index.html              ← Main landing page with timeline overview
+├── index.html              ← Login page (the site opens here)
+├── home.html               ← Main landing page with timeline overview
 ├── assets/
 │   └── images/             ← Visual assets (Phase 2)
 ├── components/             ← Reusable HTML components (Phase 2)
 ├── css/                    ← Stylesheets (Phase 2)
-├── js/                     ← Scripts (Phase 3)
 └── pages/                  ← 21 content pages
     ├── formation.html          Formation of the Earth
     ├── moon-formation.html     Moon Formation (Giant Impact)
@@ -50,7 +50,10 @@ chronoearth-master/
     ├── plate-tectonics.html    Plate Tectonics (Deep Dive)
     ├── mass-extinctions.html   The Big Five Extinctions (Deep Dive)
     ├── atmosphere.html         Evolution of the Atmosphere (Deep Dive)
-    └── quiz.html               Interactive Quiz (Phase 3)
+    ├── quiz.html               Interactive Quiz (HTML + CSS only)
+    ├── merchandise.html        Merchandise store with size chart
+    ├── checkout.html           Checkout with payment methods (demo)
+    ├── order-confirmed.html    Order confirmation
 ```
 
 ---
@@ -59,7 +62,7 @@ chronoearth-master/
 
 ### Phase 1 — HTML Structure & Content ✅ Complete
 
-- [x] Main landing page (`index.html`) with full semantic structure
+- [x] Main landing page (`home.html`) with full semantic structure
 - [x] 17 timeline pages with comprehensive educational content
 - [x] 3 deep-dive pages (Plate Tectonics, Mass Extinctions, Atmosphere)
 - [x] Quiz page UI skeleton (`quiz.html`)
@@ -76,14 +79,14 @@ chronoearth-master/
 - [ ] Image assets for each geological era
 - [ ] Animations and transitions
 
-### Phase 3 — JavaScript & Interactivity 🔲 Not Started
+### Phase 3 — HTML & CSS Features ✅ Complete
 
-- [ ] Interactive geological clock (hero section)
-- [ ] Quiz engine with branching logic (`js/quiz.js`, `js/quiz-data.js`)
-- [ ] Rotating "Did You Know?" fact carousel
-- [ ] Dinosaur size comparator (Mesozoic page)
-- [ ] Scroll-triggered timeline sync
-- [ ] Smooth page transitions
+- [x] Login page as the entry point (`index.html`, HTML validation only: admin / admin) with logout links that return to it
+- [x] Light / dark mode toggle (CSS only)
+- [x] 8-question quiz with hints, 5 options each and a CSS score counter
+- [x] Merchandise page with size chart, checkout and payment methods
+
+> This project uses **only HTML and CSS. No JavaScript.**
 
 ---
 
@@ -92,8 +95,8 @@ chronoearth-master/
 | Layer | Technology |
 |-------|-----------|
 | Structure | HTML5 |
-| Styling | CSS3 (Phase 2) |
-| Interactivity | Vanilla JavaScript (Phase 3) |
+| Styling | CSS3 |
+| Interactivity | CSS only (`:has()`, checkbox/radio state, counters) |
 | Frameworks | None — pure frontend |
 | Build Tools | None — no dependencies |
 
@@ -124,8 +127,6 @@ Or use a local development server:
 # Using Python
 python -m http.server 8000
 
-# Using Node.js
-npx serve .
 ```
 
 ---
