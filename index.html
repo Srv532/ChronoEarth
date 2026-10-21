@@ -3,212 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChronoEarth — A Journey Through Deep Time</title>
-    <meta name="description" content="Explore 4.5 billion years of Earth's history. From molten rock to modern civilization — one eon at a time.">
+    <title>Log in — ChronoEarth</title>
+    <meta name="description" content="Log in to explore 4.5 billion years of Earth's history.">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body class="theme-void">
+    <input type="checkbox" id="theme-switch" class="theme-switch" aria-label="Switch between dark and light mode">
+    <label for="theme-switch" class="theme-toggle theme-corner"><span class="when-dark">Light mode</span><span class="when-light">Dark mode</span></label>
 
-    <!-- ==================== HEADER / NAVIGATION ==================== -->
-    <header>
-        <div>
-            <h1>ChronoEarth</h1>
-            <p>4.5 Billion Years in Every Scroll</p>
-        </div>
-        
-        <div class="search-container">
-            <input type="text" placeholder="Search timeline, eras, events...">
-            <button type="button">Search</button>
-            <div class="search-suggestions">
-                <a href="#precambrian">Precambrian Supereon</a>
-                <a href="pages/formation.html">Formation of Earth</a>
-                <a href="pages/moon-formation.html">Moon Formation</a>
-                <a href="#paleozoic">Paleozoic Era</a>
-                <a href="pages/cambrian.html">Cambrian Explosion</a>
-                <a href="#mesozoic">Mesozoic Era</a>
-                <a href="pages/kpg-extinction.html">K-Pg Extinction</a>
-                <a href="#cenozoic">Cenozoic Era</a>
-                <a href="pages/human-evolution.html">Human Evolution</a>
-                <a href="pages/plate-tectonics.html">Plate Tectonics</a>
-                <a href="pages/quiz.html">Take the Quiz</a>
-            </div>
-        </div>
-        
-        <nav>
-            <a href="#timeline">Timeline</a>
-            <a href="pages/quiz.html">Quiz</a>
-            <a href="#about">About</a>
-        </nav>
-    </header>
+    <main class="login-page">
+        <section class="login-card">
+            <img src="images/logo-dark.svg" alt="ChronoEarth logo" class="logo-large logo-dark"><img src="images/logo-light.svg" alt="" class="logo-large logo-light">
+            <h1 class="login-brand">ChronoEarth</h1>
+            <p class="login-tag">4.5 Billion Years in Every Scroll</p>
 
-    <!-- ==================== HERO SECTION ==================== -->
-    <section id="hero">
-        <h2>Explore the Complete Story of Our Planet</h2>
-        <p>
-            From a molten ball of rock to the world we inhabit today, 
-            Earth has undergone extraordinary transformations. 
-            Scroll through 4.5 billion years of history, one eon at a time.
-        </p>
-        <a href="#timeline">Start Journey</a>
-    </section>
+            <!-- Shown only when you arrive from a Log out link (index.html#logged-out) -->
+            <p id="logged-out" class="login-notice" role="status">✓ You have been logged out.</p>
 
-    <!-- ==================== TIMELINE OVERVIEW ==================== -->
-    <section id="timeline">
-        <h2>The Geological Timeline</h2>
-        <p>Click any era to begin exploring.</p>
+            <p class="login-lead">Please log in to explore the history of our planet.</p>
 
-        <article id="precambrian">
-            <h3>Precambrian Supereon</h3>
-            <p>4.6 billion – 541 million years ago</p>
-            <p>Spanning over 4 billion years, the Precambrian represents the vast, foundational chapter of Earth's history. It begins with the formation of our planet from a hellish, molten state and encompasses the cooling of the crust, the formation of the first oceans, and the origin of life itself.</p>
-            
-            <div class="image-placeholder">
-                <img src="images/index.jpg" alt="Deep space void — the beginning of time">
-            </div>
-            
-            <nav>
-                <ul>
-                    <li><a href="pages/formation.html">Formation of Earth</a></li>
-                    <li><a href="pages/moon-formation.html">Moon Formation</a></li>
-                    <li><a href="pages/hadean.html">Hadean Eon</a></li>
-                    <li><a href="pages/archean.html">Archean Eon</a></li>
-                    <li><a href="pages/great-oxidation.html">Great Oxidation</a></li>
-                    <li><a href="pages/proterozoic.html">Proterozoic Eon</a></li>
-                    <li><a href="pages/snowball-earth.html">Snowball Earth</a></li>
-                </ul>
-            </nav>
-        </article>
+            <!-- HTML-only login: the browser blocks submit unless both fields match.
+                 The inputs have no name, so nothing is added to the URL. -->
+            <form class="login-form" action="home.html" method="get">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Enter your username" autocomplete="username" required
+                       pattern="admin" title="The username is admin">
+                <small class="field-error">That username is not recognised.</small>
 
-        <article id="paleozoic">
-            <h3>Paleozoic Era</h3>
-            <p>541 – 252 million years ago</p>
-            <p>The Paleozoic Era, meaning "ancient life," marks a time of dramatic biological and geological change. It kicked off with the Cambrian Explosion, an unprecedented burst of evolutionary innovation that introduced most major animal groups.</p>
-            
-            <div class="image-placeholder">
-                <img src="images/cambrian.jpg" alt="Paleozoic Era — ancient marine life">
-            </div>
-            
-            <nav>
-                <ul>
-                    <li><a href="pages/cambrian.html">Cambrian Explosion</a></li>
-                    <li><a href="pages/ordovician-silurian.html">Ordovician &amp; Silurian</a></li>
-                    <li><a href="pages/devonian.html">Devonian</a></li>
-                    <li><a href="pages/carboniferous.html">Carboniferous</a></li>
-                    <li><a href="pages/permian-extinction.html">Permian Extinction</a></li>
-                </ul>
-            </nav>
-        </article>
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password" autocomplete="current-password" required
+                       pattern="admin" title="The password is admin">
+                <small class="field-error">That password is not correct.</small>
 
-        <article id="mesozoic">
-            <h3>Mesozoic Era</h3>
-            <p>252 – 66 million years ago</p>
-            <p>Often referred to as the "Age of Reptiles," the Mesozoic Era is best known as the time when dinosaurs dominated the Earth. This era saw the breakup of Pangea, the evolution of the first birds and mammals, and the rise of flowering plants.</p>
-            
-            <div class="image-placeholder">
-                <img src="images/mesozoic.jpg" alt="Mesozoic Era — age of dinosaurs">
-            </div>
-            
-            <nav>
-                <ul>
-                    <li><a href="pages/mesozoic.html">Mesozoic Era</a></li>
-                    <li><a href="pages/kpg-extinction.html">K-Pg Extinction</a></li>
-                </ul>
-            </nav>
-        </article>
+                <button type="submit">Log in</button>
+            </form>
 
-        <article id="cenozoic">
-            <h3>Cenozoic Era</h3>
-            <p>66 million years ago – Present</p>
-            <p>The Cenozoic Era, known as the "Age of Mammals," spans the last 66 million years. In the wake of the dinosaur extinction, small survivors evolved and diversified, leading to repeated ice ages and the emergence of modern humans.</p>
-            
-            <div class="image-placeholder">
-                <img src="images/cenozoic.jpg" alt="Cenozoic Era — age of mammals">
-            </div>
-            
-            <nav>
-                <ul>
-                    <li><a href="pages/cenozoic.html">Cenozoic Era</a></li>
-                    <li><a href="pages/human-evolution.html">Human Evolution</a></li>
-                    <li><a href="pages/anthropocene.html">Anthropocene</a></li>
-                </ul>
-            </nav>
-        </article>
-
-        <article id="deep-dives">
-            <h3>Deep Dives</h3>
-            <p>Cross-cutting forces that span billions of years</p>
-            <p>Explore the most significant recurring themes in Earth's history, from the relentless cycle of plate tectonics to the catastrophic Big Five mass extinctions and the evolution of our atmosphere.</p>
-            
-            <div class="image-placeholder">
-                <img src="images/atmosphere.jpg" alt="Earth's atmosphere — deep dives">
-            </div>
-            
-            <nav>
-                <ul>
-                    <li><a href="pages/plate-tectonics.html">Plate Tectonics</a></li>
-                    <li><a href="pages/mass-extinctions.html">The Big Five Extinctions</a></li>
-                    <li><a href="pages/atmosphere.html">Evolution of the Atmosphere</a></li>
-                </ul>
-            </nav>
-        </article>
-    </section>
-
-    <!-- ==================== FEATURE PREVIEW ==================== -->
-    <section id="features">
-        <h2>What You'll Discover</h2>
-        
-        <article>
-            <h3>Interactive Timeline</h3>
-            <p>Scroll through deep time with our geological clock.</p>
-        </article>
-        
-        <article>
-            <h3>Branching Quiz</h3>
-            <p>Test your knowledge and learn from your mistakes.</p>
-            <a href="pages/quiz.html">Take the Quiz</a>
-        </article>
-        
-        <article>
-            <h3>Rich Visual Content</h3>
-            <p>Era-specific color palettes and atmospheric storytelling.</p>
-        </article>
-    </section>
-
-    <!-- ==================== DID YOU KNOW? ==================== -->
-    <section id="fact">
-        <h2>Did You Know?</h2>
-        <p>If Earth's entire history were compressed into a single 24-hour day, humans would appear at 11:59 PM.</p>
-    </section>
-
-    <!-- ==================== ABOUT / TEAM ==================== -->
-    <section id="about">
-        <h2>About ChronoEarth</h2>
-        <p>
-            ChronoEarth is an educational web project developed by a team of four 
-            B.Tech CSE students at Amrita Vishwa Vidyapeetham. Built entirely with 
-            HTML, CSS, and JavaScript, it demonstrates the application of modern 
-            frontend development principles to scientific storytelling.
-        </p>
-        
-        <h3>The Team</h3>
-        <ul>
-            <li><strong>Malavya</strong> — Project Architect &amp; Integration</li>
-            <li><strong>Divya</strong> — Content Lead &amp; Research</li>
-            <li><strong>Sravan</strong> — Visual Design &amp; UX</li>
-            <li><strong>Aravind</strong> — Interactivity &amp; Logic</li>
-        </ul>
-    </section>
-
-    <!-- ==================== FOOTER ==================== -->
-    <footer>
-        <p>ChronoEarth — B.Tech CSE Project | Amrita Vishwa Vidyapeetham</p>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="pages/quiz.html">Quiz</a>
-            <a href="#about">About</a>
-        </nav>
-        <p><small>All geological data verified against peer-reviewed sources.</small></p>
-    </footer>
-
+            <p class="login-demo">Demo account — username <strong>admin</strong>, password <strong>admin</strong></p>
+        </section>
+    </main>
 </body>
 </html>
