@@ -27,58 +27,8 @@
 
                 <fieldset class="co-box">
                     <legend>1. Your order</legend>
-                    <div class="co-row">
-                        <div class="co-field co-wide">
-                            <label for="item">Product</label>
-                            <select id="item" name="item" required>
-                                <option value="" selected disabled>Choose a product</option>
-                            <optgroup label="T-Shirts">
-                                <option>Birth from Stardust Tee — ₹799</option>
-                                <option>The Day the Dinosaurs Died Tee — ₹799</option>
-                                <option>When the Planet Froze Tee — ₹799</option>
-                            </optgroup>
-                            <optgroup label="Shirts">
-                                <option>Life’s Big Bang Camp Shirt — ₹1,499</option>
-                                <option>4.5 Billion Years Camp Shirt — ₹1,499</option>
-                                <option>Strata Linen Shirt · 541 Ma — ₹1,799</option>
-                            </optgroup>
-                            <optgroup label="Cups &amp; Mugs">
-                                <option>Hadean Magma Mug — ₹449</option>
-                                <option>Life Invented the Air Mug — ₹449</option>
-                            </optgroup>
-                            <optgroup label="Stickers">
-                                <option>Era Sticker Set — ₹249</option>
-                                <option>Quote Sticker Pack — ₹249</option>
-                                <option>Burgess Shale Sticker Pack — ₹299</option>
-                            </optgroup>
-                            <optgroup label="Badges">
-                                <option>Era Enamel Badge Set — ₹599</option>
-                            </optgroup>
-                            <optgroup label="Bottles &amp; Flasks">
-                                <option>The Great Melt Bottle — ₹899</option>
-                                <option>Geological Clock Hip Flask — ₹1,299</option>
-                            </optgroup>
-                            <optgroup label="Bags">
-                                <option>Trilobite Tote Bag — ₹599</option>
-                            </optgroup>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="co-row">
-                        <div class="co-field">
-                            <label for="size">Size</label>
-                            <select id="size" name="size" required>
-                                <option value="" selected disabled>Select size</option>
-                                <option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option>
-                                <option>One size (mugs, bottles, bags, stickers, pins)</option>
-                            </select>
-                            <small><a href="merchandise.html#size-chart">View size chart</a></small>
-                        </div>
-                        <div class="co-field">
-                            <label for="qty">Quantity</label>
-                            <input id="qty" name="qty" type="number" min="1" max="10" value="1" required>
-                        </div>
-                    </div>
+                    <div id="cart-list"></div>
+                    <noscript><p>Turn on JavaScript to use the cart.</p></noscript>
                 </fieldset>
 
                 <fieldset class="co-box">
@@ -145,7 +95,8 @@
             <aside class="checkout-summary">
                 <h2>Order summary</h2>
                 <ul>
-                    <li><span>Item price</span><span>As listed</span></li>
+                    <li><span>Items</span><span id="sum-items">0</span></li>
+                    <li><span>Total</span><strong id="sum-total">₹0</strong></li>
                     <li><span>Delivery</span><span>Calculated at dispatch</span></li>
                     <li><span>Returns</span><span>Size exchange in 7 days</span></li>
                 </ul>
@@ -160,5 +111,7 @@
         <p>ChronoEarth — B.Tech CSE Project</p>
     </footer>
 
+    <script src="../js/cart.js"></script>
+    <script src="../js/checkout.js"></script>
 </body>
 </html>
