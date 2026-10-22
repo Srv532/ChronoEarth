@@ -1808,3 +1808,11 @@ body:has(.login-page) { background: #000; }
 @media (max-width: 600px) {
     .cart-row { grid-template-columns: minmax(0, 1fr) auto; }
 }
+
+/* ============================================================
+   CARD FIELD VALIDATION MESSAGES (checkout)
+   ============================================================ */
+.field-msg { display: none; color: #f87171; font-size: var(--text-xs); }
+.field-msg.show { display: block; }
+.checkout input.is-bad { border-color: #f87171; }
+.checkout input.is-ok { border-color: #22c55e; }
