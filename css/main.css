@@ -4,6 +4,7 @@
    DESIGN SYSTEM — CSS CUSTOM PROPERTIES
    ============================================================ */
 :root {
+    color-scheme: dark;
     /* Layout */
     --max-width: 1080px;
     --content-width: 760px;
@@ -870,70 +871,7 @@ footer small {
 }
 
 /* ============================================================
-   LIGHT MODE
-   Pure CSS toggle: a hidden checkbox (#theme-switch) at the top of <body>;
-   its label is the "Light mode / Dark mode" button. Checked = light.
-   Selector includes body so it beats the era theme classes.
-   Note: without JavaScript the choice resets when you change page.
-   ============================================================ */
-body:has(#theme-switch:checked) {
-    --bg-primary: #f7f8fa;
-    --bg-elevated: #ffffff;
-    --bg-surface: #eceff3;
-    --border-subtle: rgba(0, 0, 0, 0.07);
-    --border-default: rgba(0, 0, 0, 0.14);
-    --text-primary: #1a1d23;
-    --text-secondary: #4a5260;
-    --text-muted: #7a8190;
-    --heading: #0f1217;
-    --accent: #1d4ed8;
-    --accent-soft: rgba(29, 78, 216, 0.1);
-    --accent-hover: #1e40af;
-    --accent-secondary: #b45309;
-    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.08);
-    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.14);
-}
-
-.theme-switch {
-    position: absolute;
-    opacity: 0;
-    pointer-events: none;
-}
-
-.theme-toggle {
-    padding: 8px 16px;
-    color: var(--text-primary);
-    border: 1px solid var(--border-default);
-    border-radius: var(--radius-sm);
-    font-size: var(--text-sm);
-    cursor: pointer;
-    user-select: none;
-}
-
-.theme-toggle:hover {
-    background: var(--accent-soft);
-    border-color: var(--accent);
-}
-
-body:has(#theme-switch:focus-visible) .theme-toggle {
-    outline: 2px solid var(--accent);
-    outline-offset: 2px;
-}
-
-.theme-toggle.floating {
-    position: fixed;
-    top: var(--space-sm);
-    right: var(--space-sm);
-    z-index: 10;
-}
-
-.when-light { display: none; }
-body:has(#theme-switch:checked) .when-light { display: inline; }
-body:has(#theme-switch:checked) .when-dark { display: none; }
-
-/* ============================================================
-   LOGO (dark/light variants swap via <picture> + prefers-color-scheme)
+   LOGO
    ============================================================ */
 .logo-large {
     display: block;
@@ -946,11 +884,6 @@ body:has(#theme-switch:checked) .when-dark { display: none; }
     width: 28px;
     height: 28px;
 }
-
-.logo-light { display: none; }
-body:has(#theme-switch:checked) .logo-dark { display: none; }
-body:has(#theme-switch:checked) .logo-light { display: inline-block; }
-body:has(#theme-switch:checked) .logo-large.logo-light { display: block; }
 
 .brand {
     display: inline-flex;
@@ -1645,29 +1578,8 @@ body > header.home-header nav a:first-child {
 }
 body > header.home-header nav a:first-child:hover { color: var(--text-primary); background: var(--bg-surface); opacity: 1; }
 
-.brand-logo.logo-light { display: none; }
-body:has(#theme-switch:checked) .brand-logo.logo-dark { display: none; }
-body:has(#theme-switch:checked) .brand-logo.logo-light { display: block; }
-
 @media (max-width: 640px) {
     #portal { --card-w: 78vw; }
-}
-
-/* ============================================================
-   THEME BUTTON IN THE TOP-RIGHT CORNER
-   ============================================================ */
-body { position: relative; }
-
-.theme-corner {
-    position: absolute;
-    top: var(--space-sm);
-    right: var(--space-sm);
-    z-index: 20;
-    background: var(--bg-elevated);
-}
-
-@media (max-width: 1300px) {
-    body > header:not(.home-header) { padding-right: 150px; }
 }
 
 /* ============================================================
@@ -1758,8 +1670,6 @@ body { position: relative; }
    LOGIN ENTRY PAGE (index.html)
    ============================================================ */
 body:has(.login-page) { background: #000; }
-
-body:has(#theme-switch:checked):has(.login-page) { background: #f7f8fa; }
 
 .login-card { box-shadow: var(--shadow-lg); }
 

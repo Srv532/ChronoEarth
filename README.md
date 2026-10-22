@@ -82,7 +82,6 @@ chronoearth-master/
 ### Phase 3 — HTML & CSS Features ✅ Complete
 
 - [x] Login page as the entry point (`index.html`, HTML validation only: admin / admin) with logout links that return to it
-- [x] Light / dark mode toggle (CSS only)
 - [x] 8-question quiz with hints, 5 options each and a CSS score counter
 - [x] Merchandise page with size chart, checkout and payment methods
 
